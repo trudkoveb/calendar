@@ -1,0 +1,37 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    title Calendar
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/style.min.css')
+  body
+    .container
+        .calendar
+            .calendar-header
+                .header-buttons
+                    button Добавить
+                    button Обновить
+                .header-search
+                    svg.icon
+                        use(xlink:href='../img/svg/icons-sprite.svg#search')
+                    input(type="text", placeholder="Событие, дата или участник")
+            .calendar-content
+                .navigation
+                    svg.icon#btnPrev
+                        use(xlink:href='../img/svg/icons-sprite.svg#left-arrow')
+                    span#date
+                    svg.icon#btnNext
+                        use(xlink:href='../img/svg/icons-sprite.svg#arrowhead-pointing-to-the-right')
+                    button Сегодня
+                #divCalendar
+
+
+    script(src="js/main.js")
+
+
+
+
+
+
+

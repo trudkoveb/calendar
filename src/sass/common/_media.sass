@@ -1,0 +1,32 @@
+@media (#{$max_tablets})
+    .container
+        width: auto
+
+        .calendar-header
+            @include padding-mobile-sides
+            @include flex-wrap
+            > div
+                width: 100%
+            .header-buttons
+                margin-bottom: 20px
+            .header-search
+                justify-content: flex-start
+                input
+                    width: 60%
+
+        .calendar-content
+            @include padding-mobile-sides
+            .navigation
+                @include flex-wrap
+                justify-content: center
+                span
+                    width: 60%
+                button
+            #divCalendar
+                overflow: scroll
+                table
+                    table-layout: fixed
+                    td
+                        width: 140px
+
+

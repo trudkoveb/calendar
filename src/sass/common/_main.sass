@@ -1,0 +1,101 @@
+.calendar-header
+    background-color: $color-light-grey
+    @include flex-align-center
+    justify-content: space-between
+    padding-top: 50px
+    padding-bottom: 20px
+    @include padding-sides
+    box-shadow: 0 10px 15px -5px rgba(210, 210, 210, 0.8)
+    margin-bottom: 30px
+    > div
+        width: 50%
+    .header-buttons
+        button
+            background-color: $color-dark-blue
+            font-family: $font-reg
+            padding: 5px 10px
+            border-radius: 3px
+            color: #fff
+            transition: box-shadow 0.5s
+            &:hover
+                box-shadow: 0 3px 4px 1px rgba(199, 198, 204, 0.9)
+            &:not(:last-child)
+                margin-right: 10px
+    .header-search
+        @include flex-align-center
+        justify-content: flex-end
+        .icon
+            fill: $color-dark-grey
+            width: 20px
+            height: 20px
+            margin-right: 10px
+        input
+            height: 28px
+            padding: 0 10px
+            width: 45%
+            font-family: $font-reg
+            border-radius: 3px
+            box-shadow: inset 0 1px 4px 1px #C7C6CC
+            &::-webkit-input-placeholder
+                color: #D0D0D0
+                font-family: $font-reg
+            &::-moz-placeholder/* Firefox 19+ */
+                color: #D0D0D0
+                font-family: $font-reg
+            &:-moz-placeholder/* Firefox 18- */
+                color: #D0D0D0
+                font-family: $font-reg
+            &:-ms-input-placeholder
+                color: #D0D0D0
+                font-family: $font-reg
+
+
+.calendar-content
+    @include padding-sides
+    .navigation
+        margin-bottom: 20px
+        @include flex-align-center
+        .icon
+            width: 25px
+            height: 25px
+            fill: $color-dark-grey
+            box-shadow: inset 0px 0px 5px 1px #C7C6CC
+            border-radius: 4px
+            padding: 5px
+            cursor: pointer
+        span
+            font-size: 25px
+            margin: 10px 20px
+            width: 20%
+            text-align: center
+        button
+            margin-left: 20px
+            background-color: transparent
+            padding: 5px 10px
+            border-radius: 4px
+            box-shadow: inset 0px 0px 5px 1px #C7C6CC
+    table
+        width: 100%
+        margin-bottom: 20px
+        td
+            width: 120px
+            height: 120px
+            border: 1px solid $color-dark-grey
+            color: $color-dark-grey
+            padding: 10px
+            &.current
+                background-color: $color-light-grey
+                font-family: $font-bold
+                color: $color-dark-grey
+            &.event
+                background-color: $color-light-blue
+                p
+                    color: #717579
+                    margin-top: 5px
+                    &.event-name
+                        font-family: $font-bold
+                        font-size: 15px
+                    &.event-members
+                        font-size: 13px
+            &.not-current
+                opacity: 0.4
